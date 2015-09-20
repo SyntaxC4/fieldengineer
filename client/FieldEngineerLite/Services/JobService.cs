@@ -31,9 +31,9 @@ namespace FieldEngineerLite
         
         // 1. add client initializer
         public IMobileServiceClient MobileService = null;
-        public static string MobileAppName = "fieldengineer-vnext";
-        public static string GatewayURL = "https://chrande-fieldengineeref90e9309d7f4a608a99748e0eea69de.azurewebsites.net";
-        public static string MobileAppURL = "https://fieldengineer-vnext.azurewebsites.net";
+        public static string MobileAppName = "{sitename}";
+        public static string GatewayURL = "{gateway_url}";
+        public static string MobileAppURL = "{siteurl}";
         public static string MobileAppKey = "";
         
         public AppServiceClient AppService = 
