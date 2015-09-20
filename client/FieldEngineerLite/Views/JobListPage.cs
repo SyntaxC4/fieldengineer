@@ -91,53 +91,7 @@ namespace FieldEngineerLite.Views
             logo.Source = ImageSource.FromFile("Fabrikam-small.png");
 
             var tapGestureRecognizer = new TapGestureRecognizer();
-            tapGestureRecognizer.Tapped += async (s, e) => {
-                
-                await App.JobService.EnsureLogin();
-
-                var consentlink = await App.JobService.AppService.GetConsentLinkAsync("SalesforceConnector", "javascript:close()");
-
-                var browser = new WebView {
-                    
-                    //HorizontalOptions = LayoutOptions.CenterAndExpand,
-                    VerticalOptions = LayoutOptions.FillAndExpand,
-                    Source = consentlink,
-                    //HeightRequest = 500
-
-
-
-                };
-                var closeButton = new Button
-                {
-                    HorizontalOptions = LayoutOptions.CenterAndExpand,
-                    VerticalOptions = LayoutOptions.CenterAndExpand,
-                    Font = AppStyle.DefaultFont,
-                    Text = "Close",
-                    WidthRequest = 50,
-                };
-                closeButton.Clicked += async (object sender, EventArgs ev) =>
-                {
-                    await this.Navigation.PopAsync();
-                };
-
-                ContentPage webViewPage = new ContentPage();
-                webViewPage.Title = "Authorize";
-                webViewPage.Content = new StackLayout {
-                    Orientation = StackOrientation.Vertical,
-                 
-                    Children = {
-                       
-                        browser
-                    }
-                };
-               
-
-                await this.Navigation.PushAsync(webViewPage);
-
-
-
-
-            };
+            tapGestureRecognizer.Tapped += async (s, e) => { };
         logo.GestureRecognizers.Add(tapGestureRecognizer);
 
             this.Content = new StackLayout

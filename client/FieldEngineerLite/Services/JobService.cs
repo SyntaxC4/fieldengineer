@@ -31,10 +31,13 @@ namespace FieldEngineerLite
         
         // 1. add client initializer
         public IMobileServiceClient MobileService = null;
-            
+        public static string MobileAppName = "fieldengineer-vnext";
+        public static string GatewayURL = "https://chrande-fieldengineeref90e9309d7f4a608a99748e0eea69de.azurewebsites.net";
+        public static string MobileAppURL = "https://fieldengineer-vnext.azurewebsites.net";
+        public static string MobileAppKey = "";
         
         public AppServiceClient AppService = 
-            new AppServiceClient("https://fieldengineeref90e9309d7f4a608a99748e0eea69de.azurewebsites.net");
+            new AppServiceClient(GatewayURL);
         // 2. add sync table
         private IMobileServiceSyncTable<Job> jobTable;
           
@@ -42,11 +45,11 @@ namespace FieldEngineerLite
         public async Task InitializeAsync()
         {
             this.MobileService = AppService.CreateMobileServiceClient(
-                "https://fetechnician-code.azurewebsites.net/",
-                "OtFsjAFDBBMENsPCBQFJmItwjvAfaX77");
+                MobileAppURL,
+                MobileAppKey);
             // 3. initialize local store
 
-            var store = new MobileServiceSQLiteStore("local-db-fabrikam80");
+            var store = new MobileServiceSQLiteStore("local-db-" + MobileAppName);
             store.DefineTable<Job>();
 
             await MobileService.SyncContext.InitializeAsync(store);
@@ -77,43 +80,19 @@ namespace FieldEngineerLite
 
         public async Task SyncAsync()
         {
-            // 7. add auth
-
-            await EnsureLogin();
             //5. add sync
             try
             {
                 await this.MobileService.SyncContext.PushAsync();
 
                 var query = jobTable.CreateQuery()
-                    .Where(job => job.AgentId == "2");
+                    .Where(job => job.AgentId == "Carla Davis");
 
                 await jobTable.PullAsync(null, query);
             }
             catch (Exception)
             { 
             }
-        }
-        
-        public async Task EnsureLogin()
-        {
-            LoginInProgress = true;
-            while (this.AppService.CurrentUser == null) {
-                //await this.AppService.LoginAsync(
-                try 
-                {
-                    await this.AppService.LoginAsync (App.UIContext, 
-                        MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory.ToString());
-                }
-                catch(Exception ex)
-                {
-                    Console.WriteLine("failed to authenticate: " + ex.Message);
-                }
-               
-            }
-
-            LoginInProgress = false;
-
         }
 
         public async Task CompleteJobAsync(Job job)

@@ -5,8 +5,6 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FieldEngineerLite.iOS", "FieldEngineerLite.iOS\FieldEngineerLite.iOS.csproj", "{59A5B44A-F4EC-4468-8695-BC5F2846F9CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FieldEngineerLite.Android", "FieldEngineerLite.Android\FieldEngineerLite.Android.csproj", "{BDFAB9D7-F1A2-401D-8260-9F593AD288C6}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FieldEngineerLite", "FieldEngineerLite\FieldEngineerLite.shproj", "{F1003602-A8B5-4DC9-B601-99711543FF2E}"
 EndProject
 Global
@@ -25,14 +23,6 @@ Global
 		{59A5B44A-F4EC-4468-8695-BC5F2846F9CE}.Release|iPhone Simulator.Build.0 = Release|iPhoneSimulator
 		{59A5B44A-F4EC-4468-8695-BC5F2846F9CE}.Release|Mixed Platforms.ActiveCfg = Release|iPhoneSimulator
 		{59A5B44A-F4EC-4468-8695-BC5F2846F9CE}.Release|Mixed Platforms.Build.0 = Release|iPhoneSimulator
-		{BDFAB9D7-F1A2-401D-8260-9F593AD288C6}.Debug|iPhone Simulator.ActiveCfg = Debug|Any CPU
-		{BDFAB9D7-F1A2-401D-8260-9F593AD288C6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{BDFAB9D7-F1A2-401D-8260-9F593AD288C6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{BDFAB9D7-F1A2-401D-8260-9F593AD288C6}.Debug|Mixed Platforms.Deploy.0 = Debug|Any CPU
-		{BDFAB9D7-F1A2-401D-8260-9F593AD288C6}.Release|iPhone Simulator.ActiveCfg = Release|Any CPU
-		{BDFAB9D7-F1A2-401D-8260-9F593AD288C6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{BDFAB9D7-F1A2-401D-8260-9F593AD288C6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{BDFAB9D7-F1A2-401D-8260-9F593AD288C6}.Release|Mixed Platforms.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0
