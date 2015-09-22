@@ -10,19 +10,13 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhone Simulator = Debug|iPhone Simulator
-		Debug|Mixed Platforms = Debug|Mixed Platforms
 		Release|iPhone Simulator = Release|iPhone Simulator
-		Release|Mixed Platforms = Release|Mixed Platforms
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{59A5B44A-F4EC-4468-8695-BC5F2846F9CE}.Debug|iPhone Simulator.ActiveCfg = Debug|iPhoneSimulator
 		{59A5B44A-F4EC-4468-8695-BC5F2846F9CE}.Debug|iPhone Simulator.Build.0 = Debug|iPhoneSimulator
-		{59A5B44A-F4EC-4468-8695-BC5F2846F9CE}.Debug|Mixed Platforms.ActiveCfg = Debug|iPhone
-		{59A5B44A-F4EC-4468-8695-BC5F2846F9CE}.Debug|Mixed Platforms.Build.0 = Debug|iPhone
 		{59A5B44A-F4EC-4468-8695-BC5F2846F9CE}.Release|iPhone Simulator.ActiveCfg = Release|iPhoneSimulator
 		{59A5B44A-F4EC-4468-8695-BC5F2846F9CE}.Release|iPhone Simulator.Build.0 = Release|iPhoneSimulator
-		{59A5B44A-F4EC-4468-8695-BC5F2846F9CE}.Release|Mixed Platforms.ActiveCfg = Release|iPhoneSimulator
-		{59A5B44A-F4EC-4468-8695-BC5F2846F9CE}.Release|Mixed Platforms.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0
@@ -185,6 +179,11 @@ Global
 		$0.XmlFormattingPolicy = $29
 		$29.inheritsSet = null
 		$29.scope = application/config+xml
+		$0.DotNetNamingPolicy = $30
+		$30.DirectoryNamespaceAssociation = None
+		$30.ResourceNamePolicy = FileFormatDefault
+		$0.VersionControlPolicy = $31
+		$31.inheritsSet = Mono
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		FieldEngineerLite\FieldEngineerLite.projitems*{f1003602-a8b5-4dc9-b601-99711543ff2e}*SharedItemsImports = 13
