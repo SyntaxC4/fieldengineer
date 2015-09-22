@@ -32,9 +32,9 @@ namespace FieldEngineerLite
         // 1. add client initializer
         public IMobileServiceClient MobileService = null;
         public static string MobileAppName = "{sitename}";
-        public static string GatewayURL = "{gateway_url}";
+        public static string GatewayURL = ""; // Not necessary if you're not using Auth
         public static string MobileAppURL = "{siteurl}";
-        public static string MobileAppKey = "";
+        public static string MobileAppKey = ""; // No longer required by the server
         
         public AppServiceClient AppService = 
             new AppServiceClient(GatewayURL);
