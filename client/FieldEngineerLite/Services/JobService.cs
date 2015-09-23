@@ -37,7 +37,7 @@ namespace FieldEngineerLite
         public static string MobileAppKey = ""; // No longer required by the server
         
         public AppServiceClient AppService = 
-            new AppServiceClient(GatewayURL);
+            new AppServiceClient(MobileAppURL);
         // 2. add sync table
         private IMobileServiceSyncTable<Job> jobTable;
           
