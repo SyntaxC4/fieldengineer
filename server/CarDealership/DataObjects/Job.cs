@@ -47,6 +47,7 @@ namespace FieldEngineerLiteService.DataObjects
             AgentId = "Carla Davis";
             JobNumber = "";
             Status = "Not Started";
+            WorkPerformed = "";
         }
     }
 
