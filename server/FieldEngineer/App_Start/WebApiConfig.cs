@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Web.Http;
 using Microsoft.Azure.Mobile.Server.Config;
 
-namespace CarDealership
+namespace FieldEngineer
 {
     public static class WebApiConfig
     {

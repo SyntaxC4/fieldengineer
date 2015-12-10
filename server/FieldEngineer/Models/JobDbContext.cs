@@ -31,12 +31,6 @@ namespace FieldEngineerLiteService.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            string schema = MobileAppSettingsDictionary.GetSchemaName();
-            if (!string.IsNullOrEmpty(schema))
-            {
-                modelBuilder.HasDefaultSchema(schema);
-            }
-
             modelBuilder.Conventions.Add(
                 new AttributeToColumnAnnotationConvention<TableColumnAttribute, string>(
                     "ServiceTableColumn", (property, attributes) => attributes.Single().ColumnType.ToString()));
@@ -44,8 +38,6 @@ namespace FieldEngineerLiteService.Models
             // The EntityFramework SQL Compact provider does not support the DateTimeOffset type
             modelBuilder.Types<Job>().Configure(x => x.Ignore(prop => prop.CreatedAt));
             modelBuilder.Types<Job>().Configure(x => x.Ignore(prop => prop.UpdatedAt));
-
-            Database.SetInitializer<JobDbContext>(new JobDbContextInitializer());
         }
     }
 
