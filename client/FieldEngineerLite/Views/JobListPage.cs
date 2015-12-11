@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using FieldEngineerLite.Helpers;
 using FieldEngineerLite.Models;
-using Microsoft.Azure.AppService;
 using UIKit;
 using HomeKit;
 
@@ -93,20 +92,20 @@ namespace FieldEngineerLite.Views
             var tapGestureRecognizer = new TapGestureRecognizer();
             tapGestureRecognizer.Tapped += async (s, e) => {
                 
-                await App.JobService.EnsureLogin();
+//                await App.JobService.EnsureLogin();
 
-                var consentlink = await App.JobService.AppService.GetConsentLinkAsync("SalesforceConnector", "javascript:close()");
+//                var consentlink = await App.JobService.AppService.GetConsentLinkAsync("SalesforceConnector", "javascript:close()");
 
-                var browser = new WebView {
-                    
-                    //HorizontalOptions = LayoutOptions.CenterAndExpand,
-                    VerticalOptions = LayoutOptions.FillAndExpand,
-                    Source = consentlink,
-                    //HeightRequest = 500
-
-
-
-                };
+//                var browser = new WebView {
+//                    
+//                    //HorizontalOptions = LayoutOptions.CenterAndExpand,
+//                    VerticalOptions = LayoutOptions.FillAndExpand,
+//                    Source = consentlink,
+//                    //HeightRequest = 500
+//
+//
+//
+//                };
                 var closeButton = new Button
                 {
                     HorizontalOptions = LayoutOptions.CenterAndExpand,
@@ -120,19 +119,19 @@ namespace FieldEngineerLite.Views
                     await this.Navigation.PopAsync();
                 };
 
-                ContentPage webViewPage = new ContentPage();
-                webViewPage.Title = "Authorize";
-                webViewPage.Content = new StackLayout {
-                    Orientation = StackOrientation.Vertical,
-                 
-                    Children = {
-                       
-                        browser
-                    }
-                };
+//                ContentPage webViewPage = new ContentPage();
+//                webViewPage.Title = "Authorize";
+//                webViewPage.Content = new StackLayout {
+//                    Orientation = StackOrientation.Vertical,
+//                 
+//                    Children = {
+//                       
+//                        browser
+//                    }
+//                };
                
 
-                await this.Navigation.PushAsync(webViewPage);
+//                await this.Navigation.PushAsync(webViewPage);
 
 
 
