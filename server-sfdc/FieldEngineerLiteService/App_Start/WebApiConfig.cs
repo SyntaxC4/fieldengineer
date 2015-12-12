@@ -1,20 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Web.Http;
-using Microsoft.Azure.Mobile.Server;
-using Microsoft.Azure.Mobile.Server.AppService.Config;
-using FieldEngineerLiteService.DataObjects;
-using FieldEngineerLiteService.Models;
+﻿using System.Web.Http;
 
 namespace FieldEngineerLiteService
 {
     public static class WebApiConfig
     {
         public static void Register()
-        {
-            AppServiceExtensionConfig.Initialize();
-            
+        {         
             // Use this class to set configuration options for your mobile service
             ConfigOptions options = new ConfigOptions();
 

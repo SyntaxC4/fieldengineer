@@ -29,12 +29,6 @@ namespace FieldEngineerLiteService.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            string schema = ServiceSettingsDictionary.GetSchemaName();
-            if (!string.IsNullOrEmpty(schema))
-            {
-                modelBuilder.HasDefaultSchema(schema);
-            }
-
             Database.SetInitializer<JobDbContext>(null);
             base.OnModelCreating(modelBuilder);
         }

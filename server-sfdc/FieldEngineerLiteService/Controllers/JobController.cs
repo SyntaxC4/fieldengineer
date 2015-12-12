@@ -4,16 +4,9 @@ using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.OData;
 using Microsoft.Azure.Mobile.Server;
-using Microsoft.Azure.Mobile.Server.AppService;
 using FieldEngineerLiteService.DataObjects;
 using FieldEngineerLiteService.Models;
 using Salesforce;
-using Microsoft.Azure.Mobile.Server.Security;
-using Microsoft.Azure.Mobile.Security;
-using System;
-using Microsoft.Azure.AppService;
-using Newtonsoft.Json.Linq;
-using System.Configuration;
 
 namespace FieldEngineerLiteService.Controllers
 {
@@ -23,7 +16,7 @@ namespace FieldEngineerLiteService.Controllers
         {
             base.Initialize(controllerContext);
             JobDbContext context = new JobDbContext();
-            DomainManager = new EntityDomainManager<Job>(context, Request, Services, enableSoftDelete: true);
+            DomainManager = new EntityDomainManager<Job>(context, Request, enableSoftDelete: true);
         }
 
         // GET tables/Job

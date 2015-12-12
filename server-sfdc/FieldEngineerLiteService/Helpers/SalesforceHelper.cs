@@ -1,8 +1,5 @@
-﻿using Microsoft.Azure.AppService;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 using Salesforce.Common;
-using Salesforce.Common.Models;
 using Salesforce.Force;
 using System;
 using System.Collections.Generic;
@@ -10,10 +7,7 @@ using System.Configuration;
 using System.Diagnostics;
 using System.Dynamic;
 using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using System.Web;
 
 namespace Salesforce
 {
@@ -69,10 +63,8 @@ namespace Salesforce
         }
         internal async Task<ForceClient> GetClientForApp()
         {
-            
             var gatewayUrl = ConfigurationManager.AppSettings["emA_RuntimeUrl"];
             
-
             AppServiceClient appServiceClient = new AppServiceClient(gatewayUrl);
             appServiceClient.SetCurrentUser(this.UserId, this.ZumoToken);
             var gateway = appServiceClient.CreateApiAppClient(new System.Uri(gatewayUrl));
