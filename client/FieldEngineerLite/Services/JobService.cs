@@ -23,7 +23,7 @@ namespace FieldEngineerLite
         public async Task InitializeAsync()
         {
             this.MobileService = 
-                new MobileServiceClient("https://fieldengineerlite-code.azurewebsites.net/", 
+                new MobileServiceClient("ZUMOAPPURL", 
                 new LoggingHandler(true));
 
             var store = new MobileServiceSQLiteStore("local.db");
