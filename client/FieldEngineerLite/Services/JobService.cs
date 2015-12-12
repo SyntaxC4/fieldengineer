@@ -50,14 +50,14 @@ namespace FieldEngineerLite
 
         public async Task SyncAsync()
         {
-            try
+            try 
             {
                 await this.MobileService.SyncContext.PushAsync();
                 await jobTable.PullAsync(null, jobTable.CreateQuery());
             }
-            catch (Exception e)
-            {
+            catch (Exception e) {
                 Debug.WriteLine(e);
+            }
         }
 
         public async Task CompleteJobAsync(Job job)
